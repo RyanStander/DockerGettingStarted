@@ -1,9 +1,9 @@
 function App() {
     const { Container, Row, Col } = ReactBootstrap;
     return (
-        <Container>
+        <Container fluid className="bg-dark vh-100">
             <Row>
-                <Col md={{ offset: 3, span: 6 }}>
+                <Col md={{ offset: 3, span: 6 }} className="mt-5">
                     <TodoListCard />
                 </Col>
             </Row>
@@ -106,7 +106,7 @@ function AddItemForm({ onNewItem }) {
                         disabled={!newItem.length}
                         className={submitting ? 'disabled' : ''}
                     >
-                        {submitting ? 'Adding...' : 'Add Item'}
+                        {submitting ? 'Adding...' : 'Add'}
                     </Button>
                 </InputGroup.Append>
             </InputGroup>
